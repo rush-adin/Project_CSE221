@@ -71,5 +71,23 @@ public class AddEmployee extends JFrame implements ActionListener{
         tfaddress.setBounds(200, 250, 150, 30);
         add(tfaddress);
 
+        JLabel labelphone = new JLabel("Phone");
+        labelphone.setBounds(400, 250, 150, 30);
+        labelphone.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labelphone);
+
+        tfphone = new JTextField();
+        tfphone.setBounds(600, 250, 150, 30);
+        add(tfphone);
+
+        JLabel labelemail = new JLabel("Email");
+        labelemail.setBounds(50, 300, 150, 30);
+        labelemail.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labelemail);
+
+        tfemail = new JTextField();
+        tfemail.setBounds(200, 300, 150, 30);
+        add(tfemail);
+
     }
 }

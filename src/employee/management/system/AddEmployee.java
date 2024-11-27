@@ -89,5 +89,35 @@ public class AddEmployee extends JFrame implements ActionListener{
         tfemail.setBounds(200, 300, 150, 30);
         add(tfemail);
 
+        JLabel labeleducation = new JLabel("Highest Education");
+        labeleducation.setBounds(400, 300, 150, 30);
+        labeleducation.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labeleducation);
+
+        String courses[] = {"BBA", "BCA", "BA", "BSC", "B.COM", "BTech", "MBA", "MCA", "MA", "MTech", "MSC", "PHD"};
+        cbeducation = new JComboBox(courses);
+        cbeducation.setBackground(Color.WHITE);
+        cbeducation.setBounds(600, 300, 150, 30);
+        add(cbeducation);
+
+        JLabel labeldesignation = new JLabel("Designation");
+        labeldesignation.setBounds(50, 350, 150, 30);
+        labeldesignation.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labeldesignation);
+
+        tfdesignation = new JTextField();
+        tfdesignation.setBounds(200, 350, 150, 30);
+        add(tfdesignation);
+
+        JLabel labelaadhar = new JLabel("NID Number");
+        labelaadhar.setBounds(400, 350, 150, 30);
+        labelaadhar.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labelaadhar);
+
+        tfaadhar = new JTextField();
+        tfaadhar.setBounds(600, 350, 150, 30);
+        add(tfaadhar);
+
+
     }
 }

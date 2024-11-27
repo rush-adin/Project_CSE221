@@ -4,15 +4,16 @@ import java.awt.*;
 import javax.swing.*;
 import com.toedter.calendar.JDateChooser;
 import java.util.*;
+import java.awt.event.*;
 
-public class AddEmployee extends JFrame {
+public class AddEmployee extends JFrame implements ActionListener{
 
     Random ran = new Random();
     int number = ran.nextInt(999999);
 
     JTextField tfname, tffname, tfaddress, tfphone, tfaadhar, tfemail, tfsalary, tfdesignation;
     JDateChooser dcdob;
-    JComboBox<String> cbeducation;
+    JComboBox cbeducation;
     JLabel lblempId;
     JButton add, back;
 
@@ -61,6 +62,14 @@ public class AddEmployee extends JFrame {
         tfsalary.setBounds(600, 200, 150, 30);
         add(tfsalary);
 
+        JLabel labeladdress = new JLabel("Address");
+        labeladdress.setBounds(50, 250, 150, 30);
+        labeladdress.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labeladdress);
+
+        tfaddress = new JTextField();
+        tfaddress.setBounds(200, 250, 150, 30);
+        add(tfaddress);
 
     }
 }

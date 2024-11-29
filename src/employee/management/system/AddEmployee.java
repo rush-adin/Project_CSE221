@@ -118,6 +118,37 @@ public class AddEmployee extends JFrame implements ActionListener{
         tfaadhar.setBounds(600, 350, 150, 30);
         add(tfaadhar);
 
+        JLabel labelempId = new JLabel("Employee id");
+        labelempId.setBounds(50, 400, 150, 30);
+        labelempId.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labelempId);
 
+        lblempId = new JLabel("" + number);
+        lblempId.setBounds(200, 400, 150, 30);
+        lblempId.setFont(new Font("serif", Font.PLAIN, 20));
+        add(lblempId);
+
+
+        add = new JButton("Add Details");
+        add.setBounds(250, 550, 150, 40);
+        add.addActionListener(this);
+        add.setBackground(Color.BLACK);
+        add.setForeground(Color.WHITE);
+        add(add);
+
+        back = new JButton("Back");
+        back.setBounds(450, 550, 150, 40);
+        back.addActionListener(this);
+        back.setBackground(Color.BLACK);
+        back.setForeground(Color.WHITE);
+        add(back);
+
+        setSize(900, 700);
+        setLocation(300, 50);
+        setVisible(true);
     }
+
+
+
+}
 }

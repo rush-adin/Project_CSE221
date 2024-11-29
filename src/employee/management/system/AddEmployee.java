@@ -128,7 +128,6 @@ public class AddEmployee extends JFrame implements ActionListener{
         lblempId.setFont(new Font("serif", Font.PLAIN, 20));
         add(lblempId);
 
-
         add = new JButton("Add Details");
         add.setBounds(250, 550, 150, 40);
         add.addActionListener(this);
@@ -148,7 +147,37 @@ public class AddEmployee extends JFrame implements ActionListener{
         setVisible(true);
     }
 
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == add) {
+            String name = tfname.getText();
+            String fname = tffname.getText();
+            String dob = ((JTextField) dcdob.getDateEditor().getUiComponent()).getText();
+            String salary = tfsalary.getText();
+            String address = tfaddress.getText();
+            String phone = tfphone.getText();
+            String email = tfemail.getText();
+            String education = (String) cbeducation.getSelectedItem();
+            String designation = tfdesignation.getText();
+            String NID = tfaadhar.getText();
+            String empId = lblempId.getText();
 
+            try {
+                Conn conn = new Conn();
+                String query = "insert into employee values('"+name+"', '"+fname+"', '"+dob+"', '"+salary+"', '"+address+"', '"+phone+"', '"+email+"', '"+education+"', '"+designation+"', '"+NID+"', '"+empId+"')";
+                conn.s.executeUpdate(query);
+                JOptionPane.showMessageDialog(null, "Details added successfully");
+                setVisible(false);
+                new Home();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            setVisible(false);
+            new Home();
+        }
+    }
 
-}
+    public static void main(String[] args) {
+        new AddEmployee();
+    }
 }

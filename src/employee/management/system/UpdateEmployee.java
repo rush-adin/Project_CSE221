@@ -57,3 +57,21 @@ public class UpdateEmployee extends JFrame implements ActionListener{
         tfsalary = new JTextField();
         tfsalary.setBounds(600, 200, 150, 30);
         add(tfsalary);
+
+        JLabel labeladdress = new JLabel("Address");
+        labeladdress.setBounds(50, 250, 150, 30);
+        labeladdress.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labeladdress);
+
+        tfaddress = new JTextField();
+        tfaddress.setBounds(200, 250, 150, 30);
+        add(tfaddress);
+
+        JLabel labelphone = new JLabel("Phone");
+        labelphone.setBounds(400, 250, 150, 30);
+        labelphone.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labelphone);
+
+        tfphone = new JTextField();
+        tfphone.setBounds(600, 250, 150, 30);
+        add(tfphone);

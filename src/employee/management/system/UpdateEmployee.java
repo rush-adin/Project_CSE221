@@ -107,3 +107,17 @@ public class UpdateEmployee extends JFrame implements ActionListener{
         labelaadhar.setBounds(400, 350, 150, 30);
         labelaadhar.setFont(new Font("serif", Font.PLAIN, 20));
         add(labelaadhar);
+
+        JLabel lblaadhar = new JLabel();
+        lblaadhar.setBounds(600, 350, 150, 30);
+        add(lblaadhar);
+
+        JLabel labelempId = new JLabel("Employee id");
+        labelempId.setBounds(50, 400, 150, 30);
+        labelempId.setFont(new Font("serif", Font.PLAIN, 20));
+        add(labelempId);
+
+        lblempId = new JLabel();
+        lblempId.setBounds(200, 400, 150, 30);
+        lblempId.setFont(new Font("serif", Font.PLAIN, 20));
+        add(lblempId);

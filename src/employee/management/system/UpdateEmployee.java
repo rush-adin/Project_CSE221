@@ -121,3 +121,23 @@ public class UpdateEmployee extends JFrame implements ActionListener{
         lblempId.setBounds(200, 400, 150, 30);
         lblempId.setFont(new Font("serif", Font.PLAIN, 20));
         add(lblempId);
+
+        try {
+            Conn c = new Conn();
+            String query = "select * from employee where empId = '"+empId+"'";
+            ResultSet rs = c.s.executeQuery(query);
+            while(rs.next()) {
+                lblname.setText(rs.getString("name"));
+                tffname.setText(rs.getString("fname"));
+                lbldob.setText(rs.getString("dob"));
+                tfaddress.setText(rs.getString("address"));
+                tfsalary.setText(rs.getString("salary"));
+                tfphone.setText(rs.getString("phone"));
+                tfemail.setText(rs.getString("email"));
+                tfeducation.setText(rs.getString("education"));
+                lblaadhar.setText(rs.getString("NID"));
+                lblempId.setText(rs.getString("empId"));
+                tfdesignation.setText(rs.getString("designation"));
+
+            }
+        }

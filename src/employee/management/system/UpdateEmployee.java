@@ -162,3 +162,34 @@ public class UpdateEmployee extends JFrame implements ActionListener{
         setLocation(300, 50);
         setVisible(true);
     }
+
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == add) {
+            String fname = tffname.getText();
+            String salary = tfsalary.getText();
+            String address = tfaddress.getText();
+            String phone = tfphone.getText();
+            String email = tfemail.getText();
+            String education = tfeducation.getText();
+            String designation = tfdesignation.getText();
+
+            try {
+                Conn conn = new Conn();
+                String query = "update employee set fname = '"+fname+"', salary = '"+salary+"', address = '"+address+"', phone = '"+phone+"', email =  '"+email+"', education = '"+education+"', designation = '"+designation+"' where empId = '"+empId+"'";
+                conn.s.executeUpdate(query);
+                JOptionPane.showMessageDialog(null, "Details updated successfully");
+                setVisible(false);
+                new Home();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            setVisible(false);
+            new Home();
+        }
+    }
+
+    public static void main(String[] args) {
+        new UpdateEmployee("");
+    }
+}
